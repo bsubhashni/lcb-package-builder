@@ -26,8 +26,7 @@ cd $CURRENT_DIR
 
 git clone git://github.com/couchbase/libcouchbase
 cd libcouchbase
-./config/autorun.sh
-./configure --disable-tests --disable-couchbasemock 
+cmake -DCMAKE_INSTALL_PREFIX:PATH=$(PWD)/inst -DCMAKE_BUILD_TYPE=DEBUG ./
 make
 make dist
 
