@@ -53,6 +53,8 @@ mv $PKG_DIR $NEW_PKG_DIR
 	cd $NEW_PKG_DIR
 	dch \
 		--no-auto-nmu \
+        --create \
+        --package libcouchbase \
 		--newversion "$1" \
 		"Release package for libcouchbase $1"
 
